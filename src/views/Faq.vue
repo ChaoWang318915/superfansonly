@@ -11,14 +11,14 @@
         <div class="col-accordion columns is-gapless">
           <div class="tabs-accordion column is-two-thirds contact">
             <div v-for="(item, i) in items" :key="item" v-on:click="func(i)" class="tab-accordion">
-              <input type="checkbox" :checked="item.show" name="rd" />
-              <label class="tab-accordion-label" for="rd1">
+              <input type="checkbox" :id="'faq'+i" name="faq" />
+              <label class="tab-accordion-label" :for="'faq'+i">
                 {{ item.title }}
               </label>
               <div
                 class="tab-accordion-content"
                 :class="darkMode ? 'darkText' : ''"
-                v-if="item.show"
+            
               >
                {{ item.content }}
               </div>
@@ -40,8 +40,7 @@
               class="tab-accordion-content"
               :class="darkMode ? 'darkText' : ''"
             >
-              Super Fans Only is an NFT marketplace platform where NFTs can be
-              stored, displayed, traded, and also minted.
+              Super Fans Only is an NFT marketplace platform where NFTs can be stored, displayed, traded, and also minted.
             </div>
           </div>
           <div class="tab-accordion">
@@ -65,8 +64,7 @@
               class="tab-accordion-content"
               :class="darkMode ? 'darkText' : ''"
             >
-              Creator Drop is the specific NFT of a creator that is displayed on
-              the User Site for sale and Auction.
+              Creator Drop is the specific NFT of a creator that is displayed on the User Site for sale and Auction.
             </div>
           </div>
           <div class="tab-accordion">
@@ -117,59 +115,79 @@ export default {
       items:[
         {
           title:'What is Web 3.0?',
-          content:"Web 3.0 (also known as web3) is the Internet's third iteration,which integrates data in a decentralized manner to provide a faster and more personalized user experience. It's made withartificial intelligence, machine learning, and the semantic web,and it employs the blockchain security system to keep your data safe.",
+          content:"Web 3.0 (also known as web3) is the Internet's third iteration, which integrates data in a decentralized manner to provide a faster and more personalized user experience. It's made with artificial intelligence, machine learning, and the semantic web, and it employs the blockchain security system to keep your data safe.",
           show: false
         },
         {
           title:'What are the factors that are influencing the world of web 3.0?',
-          content:"Web 3.0 (also known as web3) is the Internet's third iteration,which integrates data in a decentralized manner to provide a faster and more personalized user experience. It's made withartificial intelligence, machine learning, and the semantic web,and it employs the blockchain security system to keep your data safe.",
+          content:"The Factor that is influencing the world of web 3.0 are: Decentralization: Because Web 3.0 allows information to be found based on its content, it can be kept in several locations at the same time, making it decentralized. Trustless and Permissionless: Web 3.0 is trustless (i.e., participants will be able to engage directly without going through a trusted intermediary) and permissionless (i.e., meaning that anyone can participate without authorization from a governing body).",
+          show: false
+        },
+        {
+          title:'What will Web 3.0 bring to the world?',
+          content:"Some experts believe that the decentralized Web, also known as Web 3.0, would improve the digital world's transparency and democratization. Web 3.0 has the potential to create a decentralized digital economy in which users own and manage every part of their online appearance.",
           show: false
         },
         {
           title:'What is NFT?',
-          content:"Web 3.0 (also known as web3) is the Internet's third iteration,which integrates data in a decentralized manner to provide a faster and more personalized user experience. It's made withartificial intelligence, machine learning, and the semantic web,and it employs the blockchain security system to keep your data safe.",
+          content:"A digital asset that depicts real-world elements like art, music, in-game items, and films is known as an NFT. They're bought and traded online, often using cryptocurrency, and they're usually encoded with the same software as many other cryptos.",
+          show: false
+        },        
+        {
+          title:'What is blockchain?',
+          content:"Blockchain is a method of storing data in such a way that it is difficult or impossible to change, hack, or cheat it. A blockchain is a technology of transactions that is duplicated and distributed across the blockchain's entire network of computer systems.",
           show: false
         },
         {
-          title:'What is Web 3.0?',
-          content:"Web 3.0 (also known as web3) is the Internet's third iteration,which integrates data in a decentralized manner to provide a faster and more personalized user experience. It's made withartificial intelligence, machine learning, and the semantic web,and it employs the blockchain security system to keep your data safe.",
+          title:'Is NFT like crypto?',
+          content:"NFTs work in the same way as cryptographic tokens, but unlike cryptocurrencies like Bitcoin or Ethereum, they are not interchangeable and thus not fungible. While all bitcoins have the same value, each NFT represents a different underlying asset and so has a different worth.",
           show: false
         },
         {
-          title:'What is Web 3.0?',
-          content:"Web 3.0 (also known as web3) is the Internet's third iteration,which integrates data in a decentralized manner to provide a faster and more personalized user experience. It's made withartificial intelligence, machine learning, and the semantic web,and it employs the blockchain security system to keep your data safe.",
+          title:'What is the point of buying an NFT?',
+          content:'An NFT permits the buyer to keep the original item. It also comes with built-in authentication, which acts as proof of ownership. The "digital bragging rights" are almost as valuable as the item itself to collectors.',
           show: false
         },
         {
-          title:'What is Web 3.0?',
-          content:"Web 3.0 (also known as web3) is the Internet's third iteration,which integrates data in a decentralized manner to provide a faster and more personalized user experience. It's made withartificial intelligence, machine learning, and the semantic web,and it employs the blockchain security system to keep your data safe.",
+          title:'Is it possible to get real money from NFT?',
+          content:"An NFT, like a piece of art, can be sold for cash or cryptocurrency. However, just like bitcoin, the token's asset transfer is recorded in the blockchain.",
           show: false
         },
         {
-          title:'What is Web 3.0?',
-          content:"Web 3.0 (also known as web3) is the Internet's third iteration,which integrates data in a decentralized manner to provide a faster and more personalized user experience. It's made withartificial intelligence, machine learning, and the semantic web,and it employs the blockchain security system to keep your data safe.",
+          title:'Why NFT are so expensive?',
+          content:"NFTs are expensive because they ensure that a non-fungible item is genuine. This distinguishes these assets as one-of-a-kind. Picasso's works are non-fungible. While everyone can copy his paintings, the originals are irreplaceable and one-of-a-kind.",
           show: false
         },
         {
-          title:'What is Web 3.0?',
-          content:"Web 3.0 (also known as web3) is the Internet's third iteration,which integrates data in a decentralized manner to provide a faster and more personalized user experience. It's made withartificial intelligence, machine learning, and the semantic web,and it employs the blockchain security system to keep your data safe.",
+          title:'What is the best way to resell an NFT?',
+          content:"in order to perform any function on the Ethereum network, every user has to pay the fee for the smooth transaction. This is known as a gas fee.",
           show: false
         },
         {
-          title:'What is Web 3.0?',
-          content:"Web 3.0 (also known as web3) is the Internet's third iteration,which integrates data in a decentralized manner to provide a faster and more personalized user experience. It's made withartificial intelligence, machine learning, and the semantic web,and it employs the blockchain security system to keep your data safe.",
+          title:'What is Wallet?',
+          content:"A wallet is a software application that is used to do online transactions. Many payment solution providers, such as Metamask, provide free Wallet software that allows users to configure multiple payment methods. It is also known as E-Wallet and Crypto Wallet.",
           show: false
         },
         {
-          title:'What is Web 3.0?',
-          content:"Web 3.0 (also known as web3) is the Internet's third iteration,which integrates data in a decentralized manner to provide a faster and more personalized user experience. It's made withartificial intelligence, machine learning, and the semantic web,and it employs the blockchain security system to keep your data safe.",
+          title:'How do I choose the best wallet?',
+          content:"Wallets are free, so try out a few to see which one you prefer. You can even use your seed phrase to transfer your wallet into some other provider's software.",
           show: false
         },
         {
-          title:'What is Web 3.0?',
-          content:"Web 3.0 (also known as web3) is the Internet's third iteration,which integrates data in a decentralized manner to provide a faster and more personalized user experience. It's made withartificial intelligence, machine learning, and the semantic web,and it employs the blockchain security system to keep your data safe.",
+          title:'What is the seed phrase?',
+          content:"A seed phrase is a human-readable expression of mnemonic, which is essentially a long string of random digits or words that grants you access to the cryptocurrency connected with your wallet.",
           show: false
         },
+        {
+          title:'What is Metamask?',
+          content:"Metamask is a wallet that allows users to save and maintain account keys, broadcast transactions, transfer and receive Ethereum-based coins and tokens, and securely connect to decentralized applications.",
+          show: false
+        },
+        {
+          title:'What is the NFT Mystery box?',
+          content:"A mystery box is an NFT container that contains a unique and unexpected NFT. Buyers are willing to pay a fixed price without knowing what is inside the box until they open it.",
+          show: false
+        },        
       ]
     };
   },
